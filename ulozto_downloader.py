@@ -1,24 +1,25 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 """Uloz.to quick multiple sessions downloader.
 
 It is needed to install these two packages (names of debian packages, for other systems they may be different):
 	python3-tk
 	python3-pil.imagetk
 """
-import os
-import sys
 import argparse
-import signal
 import multiprocessing as mp
+import os
 import re
+import signal
+import sys
 import time
-from datetime import timedelta
-import requests
-import urllib
 # Imports for GUI:
 import tkinter as tk
-from PIL import Image, ImageTk
+import urllib
+from datetime import timedelta
 from io import BytesIO
+
+import requests
+from PIL import Image, ImageTk
 
 CLI_STATUS_STARTLINE = 5
 XML_HEADERS = {"X-Requested-With": "XMLHttpRequest"}
